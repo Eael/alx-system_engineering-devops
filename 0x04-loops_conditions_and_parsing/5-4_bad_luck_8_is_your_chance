@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # This script is displaying "Best School" 10 times using while loop
-# If i is the 9th then say Hi
+# If the iteration is 4, display bad luck
+# else if the iteration is 8, display good luck
 i=1
 while ((i<=10))
 do
