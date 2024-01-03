@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# This script is displaying "Best School" 10 times using while loop
+# If i is the 9th then say Hi
+i=1
+while ((i<=10))
+do
+	msg="Best School"
+	if ((i == 4)); then
+		echo "bad luck"
+	elif ((i == 8)); then
+		echo "good luck"
+	else
+		echo "$msg"
+	fi
+	((i++))
+done
