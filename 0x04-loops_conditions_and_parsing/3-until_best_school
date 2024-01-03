@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# This script is displaying "Best School" 10 times using until loop
+# Until evaluates till the condition is false
+i=0
+until ((i>=10))
+do
+	msg="Best School"
+	echo "$msg"
+	((i++))
+done
