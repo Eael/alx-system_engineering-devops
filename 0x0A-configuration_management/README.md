@@ -1,13 +1,13 @@
-##This is learning how to use Puppet.
+## This is learning how to use Puppet.
 
-###Install Puppet
-`$ apt-get install -y ruby=1:2.7+1 --allow-downgrades`
-`$ apt-get install -y ruby-augeas`
-`$ apt-get install -y ruby-shadow`
-`$ apt-get install -y puppet`
+### Install Puppet
+* ** `$ apt-get install -y ruby=1:2.7+1 --allow-downgrades`
+* ** `$ apt-get install -y ruby-augeas`
+* ** `$ apt-get install -y ruby-shadow`
+* ** `$ apt-get install -y puppet`
 
 
-###Puppet Terms
+### Puppet Terms
 1. Puppet Master: the master server that controls configuration on the nodes
 2. Puppet Agent Node: a node controlled by a Puppet Master
 3. Manifest: a file that contains a set of instructions to be executed
