@@ -3,6 +3,7 @@
 import requests
 import sys
 
+
 def to_do(id):
     """Script that displays employee TODO list
         Parameters:
@@ -16,6 +17,7 @@ def to_do(id):
     print("Employee {} is done with tasks({}/{}):".format(
         user.get("name"), len(completed), len(todos)))
     [print("\t {}".format(c)) for c in completed]
+
 
 if __name__ == '__main__':
     to_do(sys.argv[1])
