@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Returns a TO-DO list for a given employee using REST API"""
+"""
+Returns a TO-DO list for a given employee using REST API
+"""
 import requests
 import sys
 
