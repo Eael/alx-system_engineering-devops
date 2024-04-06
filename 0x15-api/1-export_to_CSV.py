@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 """
-Returns a TO-DO list for a given employee using REST API
+Exports all tasks that are owned by this employee to CSV
 """
 import requests
 import sys
 
 
 def to_do(id):
-    """Script that displays employee TODO list
+    """Script that exports employiee tasks to CSV file
         Parameters:
         id: an integer representing employee id
     """
@@ -24,15 +24,15 @@ def to_do(id):
     task_completed = 0
     task_list = ""
 
-    for task in todos_json:
-        if task.get("completed") is True:
-            task_completed += 1
-            task_list += "\t " + task.get("title") + "\n"
+    filename = "{}.csv".format(id)
 
-    print("Employee {} is done with tasks({}/{}):".format(employee_name,
-                                                          task_completed,
-                                                          number_tasks))
-    print(task_list[:-1])
+    with open(filename, "w") as csvfile:
+        for todo in todos_json:
+            completed = todo.get("completed")
+            title = todo.get("title")
+            csv_data = "\"{}\",\"{}\",\"{}\",\"{}\"\n".format(id, employee_name,
+                                                            completed, title)
+            csvfile.write(csv_data)
 
 
 if __name__ == '__main__':
