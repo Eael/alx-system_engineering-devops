@@ -30,8 +30,10 @@ def to_do(id):
         for todo in todos_json:
             completed = todo.get("completed")
             title = todo.get("title")
-            csv_data = "\"{}\",\"{}\",\"{}\",\"{}\"\n".format(id, employee_name,
-                                                            completed, title)
+            csv_data = "\"{}\",\"{}\",\"{}\",\"{}\"\n".format(id,
+                                                              employee_name,
+                                                              completed,
+                                                              title)
             csvfile.write(csv_data)
 
 
